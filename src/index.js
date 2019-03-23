@@ -6,6 +6,13 @@ import _ from 'lodash';
 import './style.css';
 import './hello.scss';
 
+// named import 반드시 {} 안에 동일한 이름으로 넣어야한다.
+import {area, circumference} from "./js/circle";
+// default import {} 없이 가져올 수 있고, 이름을 마음대로 바꿀 수 있다.
+import xxx from './js/cube'
+
+'./js/circle';
+
 function component() {
   let element = document.createElement('div');
 
@@ -17,4 +24,5 @@ function component() {
 
 document.body.appendChild(component());
 
-console.log('hello webpack');
+console.log(area(5), circumference(5));
+console.log(xxx(5));
